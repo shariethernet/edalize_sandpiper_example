@@ -1,0 +1,4 @@
+*.sv
+*.v
+Makefile
+build_*
