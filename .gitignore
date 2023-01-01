@@ -2,4 +2,4 @@
 *.v
 Makefile
 build_*
-.vscode
+.vscode/*
