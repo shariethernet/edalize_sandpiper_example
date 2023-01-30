@@ -3,3 +3,5 @@
 Makefile
 build_*
 .vscode/*
+build
+*.conf

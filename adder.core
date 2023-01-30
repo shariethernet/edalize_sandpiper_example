@@ -1,0 +1,22 @@
+CAPI=2:
+name : ::adder:0
+filesets:
+    rtl:
+        files:
+            - 1_adder.tlv 
+        file_type: TLVerilogSource
+
+targets:
+    sandpiper:
+        default_tool: sandpipersaas
+        filesets: [rtl]
+        tools:
+            sandpipersaas:
+                sandpiper_saas:
+                    - --bestsv 
+                    - --inlineGen
+                output_dir: 
+                    - "out2"
+                output_file: 
+                    - "1_adder_rtl_2.sv"
+        toplevel: [inverter]
