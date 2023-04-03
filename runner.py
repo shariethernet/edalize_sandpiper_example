@@ -1,4 +1,4 @@
-from edalize import *
+from edalize.edatool import get_edatool
 import os
 work_root = 'build_multifile'
 

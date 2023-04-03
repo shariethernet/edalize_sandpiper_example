@@ -6,6 +6,7 @@ filesets:
             - 1_adder.tlv 
         file_type: TLVerilogSource
 
+
 targets:
     sandpiper:
         default_tool: sandpipersaas
@@ -16,7 +17,43 @@ targets:
                     - --bestsv 
                     - --inlineGen
                 output_dir: 
-                    - "out2"
+                    - "out1"
                 output_file: 
-                    - "1_adder_rtl_2.sv"
+                    - 1_adder_rtl_2.sv
         toplevel: [inverter]
+
+    sp_dc:
+        filesets: [rtl]
+        toplevel: [inverter]
+        flow: sp_dc
+        flow_options:
+            sandpiper_saas:
+                    - --bestsv 
+                    - --inlineGen
+            output_file: 
+                    - 1_adder_rtl_2.sv
+            script_dir: "/home/unga/shg/work/edalize_sandpiper_example/constraints"
+        
+            dc_script:  "synth.tcl"
+            report_dir: "report"
+            jobs: 1
+            target_library: "pathtolib.db"
+            libs: "pathtolib.db"
+            indirect_source : "true"
+            gen_rtl_dir_name: "out1"
+            "rtl_in_name": "1_adder_rtl_2.sv"
+    testflow2:
+        filesets: [rtl]
+        toplevel: [inverter]
+        flow: vivado
+        flow_options:
+            frontend: "sandpiper_saas"
+            sandpiper_saas:
+                    - --bestsv 
+                    - --inlineGen
+            output_dir: 
+                    - "out1"
+            output_file: 
+                    - 1_adder_rtl_2.sv
+            pnr: vivado
+            synth: vivado
