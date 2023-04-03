@@ -1,6 +1,6 @@
 set source_path "rtl/"
 set script_path "scripts/"
-set design "cv32e40p"
+set design "inverter"
 
 proc create_dir {dir_name} {
   if {![file exists $dir_name]} {
