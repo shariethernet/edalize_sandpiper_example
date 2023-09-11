@@ -5,3 +5,7 @@ build_*
 .vscode/*
 build
 *.conf
+t*/
+*.log
+adder_actual.core
+sp_flow_2
