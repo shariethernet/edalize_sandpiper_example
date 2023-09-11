@@ -15,7 +15,8 @@ targets:
                 sandpiper_saas:
                     - --bestsv 
                     - --inlineGen
-                output_dir: 
+                    - --default_includes
+                output_dir:
                     - "out2"
                 output_file: 
                     - "1_adder_rtl_2.sv"

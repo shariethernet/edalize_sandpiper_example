@@ -1,0 +1,23 @@
+dependencies:
+  ::adder:0: []
+files:
+- core: ::adder:0
+  file_type: TLVerilogSource
+  name: src/adder_0/1_adder.tlv
+flow_options: {}
+hooks: {}
+name: adder_0
+parameters: {}
+tool_options:
+  sandpipersaas:
+    output_dir:
+    - out2
+    output_file:
+    - 1_adder_rtl_2.sv
+    sandpiper_saas:
+    - --bestsv
+    - --inlineGen
+    - --default_includes
+toplevel: inverter
+version: 0.2.1
+vpi: []
