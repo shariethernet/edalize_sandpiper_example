@@ -16,14 +16,9 @@ targets:
                 sandpiper_saas:
                     - --bestsv 
                     - --inlineGen
-<<<<<<< HEAD
                     - --default_includes
                 output_dir:
                     - "out2"
-=======
-                output_dir: 
-                    - "out1"
->>>>>>> ae7f8b9edcde674e2d6cf4dad27d4dfa190a0a45
                 output_file: 
                     - 1_adder_rtl_2.sv
         toplevel: [inverter]
